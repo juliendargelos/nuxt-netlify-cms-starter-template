@@ -4,6 +4,7 @@ _:
 ---
 title: Lorem Ipsum
 image: /uploads/lorem-ipsum.jpg
+date: 2019-05-26
 ---
 
 # Lorem ipsum

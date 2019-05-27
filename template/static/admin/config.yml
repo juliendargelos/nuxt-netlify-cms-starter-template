@@ -50,6 +50,5 @@ collections:
     slug: '{{interpolated 'year'}}-{{interpolated 'month'}}-{{interpolated 'day'}}-{{interpolated 'slug'}}'
     fields:
       - { label: Title, name: title, required: true, widget: string }
-      - { label: Description, name: description, required: true, widget: text }
       - { label: Publish date, name: date, widget: datetime }
       - { label: Content, name: body, widget: markdown }
