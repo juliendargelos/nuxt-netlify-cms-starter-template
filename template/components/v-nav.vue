@@ -83,8 +83,12 @@ export default {
   },
 
   methods: {
+    clean(path) {
+      return path.replace(/^\/?(.+?)\/?/, '$1')
+    },
+
     current(path) {
-      return path === this.$nuxt.$route.path
+      return this.clean(path) === this.clean(this.$nuxt.$route.path)
     }
   }
 }
