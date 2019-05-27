@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  repo: juliendargelos/nuxt-netlify-cms-starter-template
+
+site_url: https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - label: Settings
+    name: settings
+    extension: md
+    files:
+      - label: Website
+        name: website
+        file: test/content/settings/website.md
+        fields:
+          - { label: Title, name: title, required: true, widget: string }
+          - { label: Description, name: description, required: true, widget: string }
+
+  - label: Pages
+    label_singular: Page
+    name: pages
+    extension: md
+    files:
+      - label: Home
+        name: home
+        file: test/content/pages/home.md
+        fields:
+          - { label: Content, name: body, widget: markdown }
+      - label: About
+        name: about
+        file: test/content/pages/about.md
+        fields:
+          - { label: Title, name: title, required: true, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+  - label: Posts
+    label_singular: Post
+    name: posts
+    folder: test/content/blog/posts
+    create: true
+    extension: md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: Title, name: title, required: true, widget: string }
+      - { label: Description, name: description, required: true, widget: text }
+      - { label: Publish date, name: date, widget: datetime }
+      - { label: Content, name: body, widget: markdown }

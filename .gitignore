@@ -1,5 +1,4 @@
 node_modules/
-test/
 debug.txt
 cache
 !cache/.keep
