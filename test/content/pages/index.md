@@ -28,7 +28,7 @@ This is a starter template to build static websites with Vue.js and Netlify CMS,
 
 Demo admin credentials (readonly):
 - email: `guest@demo`
-- password: `demo`
+- password: `guest`
 
 ---
 
