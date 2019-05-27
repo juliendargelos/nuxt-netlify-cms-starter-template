@@ -13,7 +13,7 @@ collections:
     files:
       - label: Website
         name: website
-        file: content/settings/website.md
+        file: {{rootPath}}content/settings/website.md
         fields:
           - { label: Title, name: title, required: true, widget: string }
           - { label: Description, name: description, required: true, widget: string }
@@ -25,12 +25,12 @@ collections:
     files:
       - label: Home
         name: home
-        file: content/pages/home.md
+        file: {{rootPath}}content/pages/home.md
         fields:
           - { label: Content, name: body, widget: markdown }
       - label: About
         name: about
-        file: content/pages/about.md
+        file: {{rootPath}}content/pages/about.md
         fields:
           - { label: Title, name: title, required: true, widget: string }
           - { label: Content, name: body, widget: markdown }
@@ -38,10 +38,10 @@ collections:
   - label: Posts
     label_singular: Post
     name: posts
-    folder: content/blog/posts
+    folder: {{rootPath}}content/blog/posts
     create: true
-    extension: md
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    extension: mds
+    slug: '{{interpolated 'year'}}-{{interpolated 'month'}}-{{interpolated 'day'}}-{{interpolated 'slug'}}'
     fields:
       - { label: Title, name: title, required: true, widget: string }
       - { label: Description, name: description, required: true, widget: text }

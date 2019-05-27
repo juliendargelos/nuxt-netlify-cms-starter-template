@@ -17,7 +17,7 @@
     "test": "yarn cache:stash && node scripts/test && yarn cache:pop && yarn --cwd test install",
     "cache:stash": "[ -d test/node_modules ] && [ -f test/yarn.lock ] && mv test/node_modules cache/node_modules && mv test/yarn.lock cache/yarn.lock || true",
     "cache:pop": "[ -d cache/node_modules ] && [ -f cache/yarn.lock ] && mv cache/node_modules test/node_modules && mv cache/yarn.lock test/yarn.lock || true",
-    "vue-cli:init": "rm -rf test && vue init . test"
+    "vue-cli:init": "rm -rf test && DEMO=true vue init . test"
   },
   "keywords": [
     "nuxt",
