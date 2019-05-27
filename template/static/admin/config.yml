@@ -1,35 +1,48 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+site_url: https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com
+media_folder: static/uploads
+public_folder: /uploads
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/blog/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Description, name: description, widget: text, required: true}
-      - {label: Publish date, name: date, widget: "datetime"}
-      - {label: Content, name: body, widget: "markdown"}
-  - label: "Pages"
-    name: "pages"
+  - label: Settings
+    name: settings
+    extension: md
     files:
-      - label: "Page 1"
-        name: "page-1"
-        file: "content/pages/page-1.md"
+      - label: Website
+        name: website
+        file: content/settings/website.md
         fields:
-          - {label: Title, name: title, widget: string, required: true}
-          - {label: Description, name: description, widget: text, required: true}
-          - {label: Content, name: body, widget: markdown}
-      - label: "Page 2"
-        name: "page-2"
-        file: "content/pages/page-2.md"
+          - { label: Title, name: title, required: true, widget: string }
+          - { label: Description, name: description, required: true, widget: string }
+
+  - label: Pages
+    label_singular: Page
+    name: pages
+    extension: md
+    files:
+      - label: Home
+        name: home
+        file: content/pages/home.md
         fields:
-          - {label: Title, name: title, widget: string, required: true}
-          - {label: Description, name: description, widget: text, required: true}
-          - {label: Content, name: body, widget: markdown}
+          - { label: Content, name: body, widget: markdown }
+      - label: About
+        name: about
+        file: content/pages/about.md
+        fields:
+          - { label: Title, name: title, required: true, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+  - label: Posts
+    label_singular: Post
+    name: posts
+    folder: content/blog/posts
+    create: true
+    extension: md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: Title, name: title, required: true, widget: string }
+      - { label: Description, name: description, required: true, widget: text }
+      - { label: Publish date, name: date, widget: datetime }
+      - { label: Content, name: body, widget: markdown }

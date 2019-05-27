@@ -1,8 +1,12 @@
+const path = require('path')
+const fs = require('fs')
+
 module.exports = {
   helpers: {
     escape: function(value) {
       return value.replace(/'/g, '&apos;');
-    }
+    },
+    readme: fs.readFileSync(path.join(__dirname, 'README.md')).toString()
   },
   prompts: {
     name: {

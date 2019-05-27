@@ -1,0 +1,36 @@
+$sans-serif: 'Open Sans', sans-serif
+$display: 'Montserrat', sans-serif
+
+@function text-stroke-shadow-layer($offset, $color)
+  $text-shadow: ()
+  $text-shadow: append($text-shadow, #{$offset}px 0 0 $color, comma)
+  $text-shadow: append($text-shadow, #{$offset}px #{$offset}px 0 $color, comma)
+  $text-shadow: append($text-shadow, 0 #{$offset}px 0 $color, comma)
+  $text-shadow: append($text-shadow, #{-$offset}px #{$offset}px 0 $color, comma)
+  $text-shadow: append($text-shadow, #{-$offset}px 0 0 $color, comma)
+  $text-shadow: append($text-shadow, #{-$offset}px #{-$offset}px 0 $color, comma)
+  $text-shadow: append($text-shadow, 0 #{-$offset}px 0 $color, comma)
+  $text-shadow: append($text-shadow, #{$offset}px #{-$offset}px 0 $color, comma)
+
+  @return $text-shadow
+
+@function text-stroke-shadow($color: $black, $width: 1px)
+  $width: strip-unit($width)
+  $floor-width: floor($width)
+  $text-shadow: ()
+
+  @for $offset from 1 through $floor-width
+    $text-shadow: append($text-shadow, text-stroke-shadow-layer($offset, $color), comma)
+
+  @if $width != $floor-width
+    $text-shadow: append($text-shadow, text-stroke-shadow-layer($width, $color), comma)
+
+  @return $text-shadow
+
+=text-stroke($color: $black, $width: 1px)
+  text-shadow: text-stroke-shadow($color, $width)
+
+  +media-webkit
+    -webkit-text-stroke: $width $color
+    text-shadow: none
+    @content

@@ -1,27 +1,30 @@
 <p align="center">
-  <img width="386" src="https://raw.githubusercontent.com/renestalder/nuxt-netlify-cms-starter-template/master/docs/nuxt-netlify.svg?sanitize=true" alt="Nuxt Netlify Logo" />
+  <img width="386" src="https://raw.githubusercontent.com/juliendargelos/nuxt-netlify-cms-starter-template/master/docs/nuxt-netlify.svg?sanitize=true" alt="Nuxt Netlify Logo" />
 </p>
 
 # Nuxt.js + Netlify CMS starter template
 
-[![Build Status](https://travis-ci.org/renestalder/nuxt-netlify-cms-starter-template.svg?branch=master)](https://travis-ci.org/renestalder/nuxt-netlify-cms-starter-template)
-
 > Build server-less, static websites with Vue.js and Netlify CMS.
+
+Forked from [renestalder/nuxt-netlify-cms-starter-template](https://github.com/renestalder/nuxt-netlify-cms-starter-template).
 
 This is a starter template to build static websites with Vue.js and Netlify CMS, based on Nuxt v1.x. What it covers:
 
-* **Setup via Vue CLI** 🏗  
+* **Setup via Vue CLI**
   Easily setup a nearly blank Nuxt.js project.  
   *Currently not optimized for Vue CLI v3.0*.
-* **Content editing via Netlify CMS** ✏️  
+* **Content editing via Netlify CMS**
   Netlify CMS is a client-side CMS connecting directly to your git repository to edit markdown files.  
   *Also supports other file formats, but this template only works with the default, frontmatter markdown format.*
-* **Show content in Vue.js via Nuxtent/Nuxtdown module** 🔍️  
+* **Show content in Vue.js via Nuxtent/Nuxtdown module**
   The Nuxtdown module (fixed fork from Nuxtent) allows querying the content and show in the UI.
-* **Static-site generation via Nuxt.js** ✅  
+* **Static-site generation via Nuxt.js**
   Nuxt.js, the famous framework to build universal Vue.js applications, generates a static-site.
 
-  ---
+**Repository**: [github.com/juliendargelos/nuxt-netlify-cms-starter-template](https://github.com/juliendargelos/nuxt-netlify-cms-starter-template)<br>
+**Demo**: [juliendargelos-nuxt-netlify-cms-starter-template.netlify.com](https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com)
+
+---
 
 <!-- TOC -->
 
@@ -50,10 +53,10 @@ This is a starter template to build static websites with Vue.js and Netlify CMS,
 1. **Install via [vue-cli](https://github.com/vuejs/vue-cli)**: If you use newer version of Vue CLI, you probably will have to install an additional package for `vue init` to work, as this template is not yet optimized for the newer Vue CLI.
 
 ``` bash
-$ vue init renestalder/nuxt-netlify-cms-starter-template my-project  
+$ vue init juliendargelos/nuxt-netlify-cms-starter-template my-project  
 $ cd my-project                  
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install # Or npm install
 ```
 
 2. **Push the project to your git repository**: To be able to edit content at all, you need to push your project to a git repository. The CMS always connects directly to the git repository and edits the content on the branch set in `static/admin/config.yml`.
@@ -108,7 +111,7 @@ $ npm run generate:manual
 
 #### Deploy to Netlify
 
-The folder of your generated project will contain a `netlify-example.toml` file you can rename to `netlify.toml` to get started with Netlify deployment. It automatically sets the `BASE_URL` based on your Netlify configuration and the type of deployment (Production deployment, branch deployment, preview deployment). So **no need to set the production URL in the `package.json`**.
+The folder of your generated project will contain a  `netlify.toml` to get started with Netlify deployment. It automatically sets the `BASE_URL` based on your Netlify configuration and the type of deployment (Production deployment, branch deployment, preview deployment). So **no need to set the production URL in the `package.json`**.
 
 #### Deploy with other CI solutions
 
@@ -118,11 +121,7 @@ If you use other CI solutions, you always have to make sure, that the environmen
 
 * **Doesn't work with Nuxt v2.3.0 and higher**: There are some changes in Nuxt v2.3.0 that are not compatible with Nuxtdown/Nuxtent. That's why the version is currently fixed at v2.2.x.
 
-## Contribution
-
-If you're interested in contributing to the project, see [CONTRIBUTING.md][contributing]
-
-[contributing]: ./CONTRIBUTING.md
+[contributing]: https://github.com/juliendargelos/nuxt-netlify-cms-starter-template/blob/master/CONTRIBUTING.md
 [netlifydocs-configuration]: https://www.netlifycms.org/docs/configuration-options/
 [nuxtdownreadme]: https://github.com/joostdecock/nuxtdown-module/blob/master/README.md
 [nuxtconfig]: https://nuxtjs.org/guide/configuration

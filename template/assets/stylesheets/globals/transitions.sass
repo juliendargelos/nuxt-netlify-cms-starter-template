@@ -1,0 +1,12 @@
+.page
+  &-enter
+    transform: translateY(-80px)
+    opacity: 0
+
+    &-active
+      transition: .4s $easeOutExpo, opacity .4s ease-out
+
+  &-leave-active
+    transform: translateY(320px)
+    opacity: 0
+    transition: transform .2s $easeInExpo, opacity .2s ease-out

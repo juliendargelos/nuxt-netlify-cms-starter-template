@@ -6,21 +6,21 @@
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn # Or npm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev
 
 # build with server-side rendering for production
 # and start server
-$ npm run build
-$ npm start
+$ yarn build
+$ yarn start
 
 # generate static project for production
-$ npm run generate
+$ yarn generate
 ```
 
-See [starter template documentation in the README on GitHub](https://github.com/renestalder/nuxt-netlify-cms-starter-template) for additional usage and configuration.
+See [starter template documentation in the README on GitHub](https://github.com/juliendargelos/nuxt-netlify-cms-starter-template) for additional usage and configuration.
 
 ## Edit content
 

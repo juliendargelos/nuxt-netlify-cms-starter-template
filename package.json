@@ -1,19 +1,23 @@
 {
   "name": "nuxt-netlify-cms-starter-template",
+  "private": true,
   "version": "2.0.0",
   "description": "Build server-less, static websites with Vue.js and Netlify CMS.",
+  "repository": "https://github.com/juliendargelos/nuxt-netlify-cms-starter-template",
+  "homepage": "https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com",
+  "author": "Julien Dargelos <contact@juliendargelos.com>",
+  "license": "MIT",
   "main": "meta.js",
-  "private": true,
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "ci:test": "node generate-test.js && cd test && npm install && npm run generate",
+    "build": "yarn test && yarn --cwd test generate",
+    "dev": "yarn test && yarn --cwd test dev",
+    "test": "yarn cache:stash && node scripts/test && yarn cache:pop && yarn --cwd test install",
+    "cache:stash": "[ -d test/node_modules ] && [ -f test/yarn.lock ] && mv test/node_modules cache/node_modules && mv test/yarn.lock cache/yarn.lock || true",
+    "cache:pop": "[ -d cache/node_modules ] && [ -f cache/yarn.lock ] && mv cache/node_modules test/node_modules && mv cache/yarn.lock test/yarn.lock || true",
     "vue-cli:init": "rm -rf test && vue init . test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/renestalder/nuxt-netlify-cms-starter-template.git"
   },
   "keywords": [
     "nuxt",
@@ -22,12 +26,6 @@
     "serverless",
     "jamstack"
   ],
-  "author": "René Stalder <renestalder@protonmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/renestalder/nuxt-netlify-cms-starter-template/issues"
-  },
-  "homepage": "https://github.com/renestalder/nuxt-netlify-cms-starter-template#readme",
   "devDependencies": {
     "@vue/cli": "^3.2.3",
     "@vue/cli-init": "^3.2.0",
