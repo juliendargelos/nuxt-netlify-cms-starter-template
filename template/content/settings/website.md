@@ -1,5 +1,5 @@
 ---
-_: _
+_:
 ---
 ---
 title: Nuxt.js + Netlify CMS starter template

@@ -1,5 +1,5 @@
 ---
-_: _
+_:
 ---
 ---
 title: Lorem Ipsum

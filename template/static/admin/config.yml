@@ -42,7 +42,7 @@ collections:
   - label: Posts
     label_singular: Post
     name: posts
-    folder: {{rootPath}}content/blog/posts
+    folder: {{rootPath}}content/posts
     create: true
     extension: md
     editor:

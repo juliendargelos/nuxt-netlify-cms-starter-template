@@ -1,3 +1,5 @@
+---
+---
 <p align="center">
   <img width="386" src="https://raw.githubusercontent.com/juliendargelos/nuxt-netlify-cms-starter-template/master/docs/nuxt-netlify.svg?sanitize=true" alt="Nuxt Netlify Logo" />
 </p>
