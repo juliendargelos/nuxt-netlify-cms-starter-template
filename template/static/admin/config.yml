@@ -3,13 +3,15 @@ backend:
   repo: juliendargelos/nuxt-netlify-cms-starter-template
 
 site_url: https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com
-media_folder: static/uploads
+media_folder: {{rootPath}}static/uploads
 public_folder: /uploads
 
 collections:
   - label: Settings
     name: settings
     extension: md
+    editor:
+      preview: false
     files:
       - label: Website
         name: website
@@ -22,6 +24,8 @@ collections:
     label_singular: Page
     name: pages
     extension: md
+    editor:
+      preview: false
     files:
       - label: Home
         name: home
@@ -41,6 +45,8 @@ collections:
     folder: {{rootPath}}content/blog/posts
     create: true
     extension: md
+    editor:
+      preview: false
     slug: '{{interpolated 'year'}}-{{interpolated 'month'}}-{{interpolated 'day'}}-{{interpolated 'slug'}}'
     fields:
       - { label: Title, name: title, required: true, widget: string }
