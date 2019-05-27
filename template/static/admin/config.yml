@@ -25,7 +25,7 @@ collections:
     files:
       - label: Home
         name: home
-        file: {{rootPath}}content/pages/home.md
+        file: {{rootPath}}content/pages/index.md
         fields:
           - { label: Content, name: body, widget: markdown }
       - label: About
