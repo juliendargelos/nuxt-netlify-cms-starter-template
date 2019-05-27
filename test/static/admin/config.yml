@@ -3,6 +3,7 @@ backend:
   repo: juliendargelos/nuxt-netlify-cms-starter-template
 
 site_url: https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com
+display_url: https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com
 media_folder: test/static/uploads
 public_folder: /uploads
 
