@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: juliendargelos/nuxt-netlify-cms-starter-template
 
 site_url: https://juliendargelos-nuxt-netlify-cms-starter-template.netlify.com
 media_folder: static/uploads
