@@ -84,7 +84,7 @@ export default {
 
   methods: {
     clean(path) {
-      return path.replace(/^\/?(.+?)\/?/, '$1')
+      return path.replace(/^\/?(.*?)\/?/, '$1')
     },
 
     current(path) {
