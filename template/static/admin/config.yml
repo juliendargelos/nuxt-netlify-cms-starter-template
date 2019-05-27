@@ -40,7 +40,7 @@ collections:
     name: posts
     folder: {{rootPath}}content/blog/posts
     create: true
-    extension: mds
+    extension: md
     slug: '{{interpolated 'year'}}-{{interpolated 'month'}}-{{interpolated 'day'}}-{{interpolated 'slug'}}'
     fields:
       - { label: Title, name: title, required: true, widget: string }
