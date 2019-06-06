@@ -41,7 +41,7 @@
       weight: bolder
     color: $white
     text-transform: uppercase
-    +text-stroke
+    +text-stroke($color: $primary)
       color: transparent
 
   &__content
