@@ -49,7 +49,7 @@
 
   &__item:hover &__link
     color: rgba($light-grey, 0)
-    +text-stroke
+    +text-stroke($color: $primary)
 </style>
 
 <script>
